@@ -97,3 +97,11 @@ function hero(bullets, dragons){
       return true
     }
   };
+
+  const multiply = (a,b) =>{
+    return a * b
+   }
+
+   function buildString(...template){
+    return `I like ${template.join(', ')}!`;
+  }
