@@ -105,3 +105,26 @@ function hero(bullets, dragons){
    function buildString(...template){
     return `I like ${template.join(', ')}!`;
   }
+
+  // Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+  function reverseWords(str) {
+    // Go for it
+    let reverseArray = str.split("").reverse()
+    let newString = (reverseArray.join(' ').split("  ").reverse().join())
+    let finalString = newString.replace(/ +/g, "").replace(/,/g," ")
+    return finalString
+  
+  }
+
+  // Your task is to make a function that can take any non-negative integer as an argument
+  // and return it with its digits in descending order. Essentially, rearrange the digits to create 
+  //the highest possible number.
+
+  function descendingOrder(n){
+    //...
+  let newString =  n.toString().split("").sort().reverse().join().replace(/,/g, "")
+  let newNumber = Number(newString)
+  return newNumber
+  
+  }
