@@ -128,3 +128,54 @@ function hero(bullets, dragons){
   return newNumber
   
   }
+
+  //implement a function that accepts 3 integer values a, b, c. The function should return true if a triangle can be built with the sides of given length
+   //and false in any other case.
+//(In this case, all triangles must have surface greater than 0 to be accepted).
+function isTriangle(a,b,c)
+{
+  let trianleSum =  a + b + c
+  if(a + b < c || a+b === c){
+    return false
+  }else if(a+c< b || a+c === b){
+    return false
+  }else if( b+c<a || b+c === a){
+   return false
+}else{
+  return true
+}
+  }
+//LEETCODE PROBLEM
+//   Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+// You can return the answer in any order.
+
+ /**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+  for(let i=0; i<nums.length;i++)
+      for(let t = i+1;t<nums.length ;t++)
+          if(nums[i] + nums[t] === target)
+              return [i,t]
+};
+//is both numbers divisble by number
+function isDivideBy(number, a, b) {
+  // good luck
+  let isTrue = true
+ if(number % a === 0 && number % b === 0){
+   return isTrue = true
+ }else{
+   return isTrue = false
+ }
+  return isTrue
+}
+
+//return sentence form array
+function smash (words) {
+  return words.join(" ")
+};
